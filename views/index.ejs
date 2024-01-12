@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Weather Station</title>
+  <!-- Add Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #94a3ff, #8b5cff);
+    }
+
+    .weather-container {
+      background: linear-gradient(to bottom right, #a2c2ff, #a389f5);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: 70%;
+      text-align: center;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #3d3d3d;
+    }
+
+    p {
+      margin: 15px 0;
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    /* Add styles for icons */
+    .icon {
+      margin-right: 10px;
+      font-size: 1.5em;
+    }
+
+    /* Add styles for top browser icon */
+    link[rel="icon"] {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  </style>
+  <!-- Add a top browser icon -->
+  <!-- Replace the link to favicon with a link to your preferred image -->
+  <link rel="icon" href="https://openweathermap.org/img/wn/10d.png" type="image/png">
+</head>
+
+<body>
+  <div class="weather-container">
+    <h1>Home Weather Station</h1>
+    <p><i class="icon fas fa-tint"></i><strong>Humidity:</strong> <%= data.humidity %> %</p>
+    <p><i class="icon fas fa-thermometer-half"></i><strong>Temperature:</strong> <%= data.temperature %> °C</p>
+    <p><i class="icon fas fa-wind"></i><strong>Air Pressure:</strong> <%= data.airPressure %> hPa</p>
+    <p><i class="icon fas fa-cloud"></i><strong>Is it Cloudy?</strong> <%= data.isCloudy ? 'Yes' : 'No' %></p>
+    <p><i class="icon fas fa-cloud-showers-heavy"></i><strong>Is it Rainy?</strong> <%= data.isRainy ? 'Yes' : 'No' %></p>
+    <p><i class="icon fas fa-sun"></i><strong>Is it Sunny?</strong> <%= data.isSunny ? 'Yes' : 'No' %></p>
+  </div>
+</body>
+
+</html>
+

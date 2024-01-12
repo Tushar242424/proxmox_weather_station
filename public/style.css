@@ -1,0 +1,29 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dff6ff;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 260px;
+    background: #fff;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out;
+    text-align: center; /* Center the content */
+}
+
+.title-for-Website {
+    font-weight: bold;
+    background-color: white;
+}
+
+/* Rest of your styles remain unchanged */
+
